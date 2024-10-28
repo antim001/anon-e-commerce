@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Proceed</title>
+    <style>
+        /* Container styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e0dce4, #2575fc);
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Animation setup */
+        .animate-slide-in {
+            opacity: 0;
+            transform: translateY(-100%);
+            animation: slideIn 0.8s ease forwards;
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Order container styling */
+        .order-container {
+            background-color: #ffffff;
+            width: 450px;
+            padding: 30px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333333;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Button styling */
+        button {
+            width: 100%;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        /* Add other form styles here... */
+    </style>
+</head>
+<body>
+
+    <!-- Order container -->
+    <div id="orderContainer" class="order-container animate-slide-in">
+        <h2>Order Summary</h2>
+
+        <!-- Order details... -->
+        <div style="margin-bottom: 30px; padding: 20px; background-color: #f8f9fa; border-radius: 8px;">
+            <p><strong>Items:</strong> 3</p>
+            <p><strong>Subtotal:</strong> $150.00</p>
+            <p><strong>Shipping:</strong> $10.00</p>
+            <p style="font-weight: bold; font-size: 18px;"><strong>Total:</strong> $160.00</p>
+        </div>
+
+        <!-- Confirm order button -->
+        <button>Confirm Order</button>
+    </div>
+
+</body>
+</html>
