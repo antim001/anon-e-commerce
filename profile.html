@@ -1,43 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Update</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile Page</title>
 </head>
-<body style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial, sans-serif; background-color: #f3f4f6; margin: 0;">
-    <div style="background-color: #ffffff; width: 400px; padding: 20px; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); border-radius: 10px;">
-        <h2 style="text-align: center; color: #333333; margin-bottom: 20px;">Update Profile</h2>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f9; margin: 0; padding: 0; display: flex; height: 100vh;">
+
+  <!-- Side Panel -->
+  <div style="width: 200px; background-color: #007bff; color: #fff; display: flex; flex-direction: column; align-items: start; padding: 20px;">
+    <h2 style="margin: 0 0 20px;">User Profile</h2>
+    <button onclick="showTab('profile')" style="background: none; border: none; color: #fff; font-size: 18px; padding: 10px; text-align: left; width: 100%; cursor: pointer;">Profile</button>
+    <button onclick="showTab('updateProfile')" style="background: none; border: none; color: #fff; font-size: 18px; padding: 10px; text-align: left; width: 100%; cursor: pointer;">Update Profile</button>
+    <button onclick="showTab('orders')" style="background: none; border: none; color: #fff; font-size: 18px; padding: 10px; text-align: left; width: 100%; cursor: pointer;">Orders</button>
+  </div>
+
+  <!-- Content Area -->
+  <div style="flex-grow: 1; padding: 20px;">
+    <h1 style="font-size: 24px; margin-bottom: 20px;">User Profile Page</h1>
+
+    <!-- Profile Section -->
+    
         
-        <!-- Profile Picture -->
-        <div style="display: flex; justify-content: center; margin-bottom: 20px;">
-            <div style="width: 80px; height: 80px; border-radius: 50%; background-color: #cccccc; display: flex; justify-content: center; align-items: center; font-size: 24px; color: #666;">
-                <span>👤</span>
-            </div>
-        </div>
-
-        <form>
-            <!-- Name Field -->
-            <label for="name" style="color: #333333; font-weight: bold; font-size: 14px;">Full Name</label>
-            <input type="text" id="name" placeholder="Enter your name" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; border: 1px solid #dddddd; border-radius: 5px; font-size: 14px;">
-
-            <!-- Email Field -->
-            <label for="email" style="color: #333333; font-weight: bold; font-size: 14px;">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; border: 1px solid #dddddd; border-radius: 5px; font-size: 14px;">
-
-            <!-- Phone Field -->
-            <label for="phone" style="color: #333333; font-weight: bold; font-size: 14px;">Phone Number</label>
-            <input type="tel" id="phone" placeholder="Enter your phone number" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; border: 1px solid #dddddd; border-radius: 5px; font-size: 14px;">
-
-            <!-- Address Field -->
-            <label for="address" style="color: #333333; font-weight: bold; font-size: 14px;">Address</label>
-            <input type="text" id="address" placeholder="Enter your address" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px; border: 1px solid #dddddd; border-radius: 5px; font-size: 14px;">
-
-            <!-- Submit Button -->
-            <button type="submit" style="width: 100%; background-color: #4CAF50; color: white; padding: 10px; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer;">
-                Update Profile
-            </button>
-        </form>
+        <!-- Profile Icon -->
+        
+      
+        <!-- Profile Details -->
+       <div id="profile" style="display: block;">
+  <h2 style="font-size: 20px; color: #333;">Profile</h2>
+  
+  <!-- Profile Icon with SVG -->
+  <div style="display: flex; align-items: center; margin-bottom: 20px;">
+    <!-- SVG Profile Icon -->
+    <div style="width: 80px; height: 80px; border-radius: 50%; background-color: #007bff; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C9.243 2 7 4.243 7 7C7 9.757 9.243 12 12 12C14.757 12 17 9.757 17 7C17 4.243 14.757 2 12 2zM12 10C10.346 10 9 8.654 9 7C9 5.346 10.346 4 12 4C13.654 4 15 5.346 15 7C15 8.654 13.654 10 12 10zM12 14C8.692 14 6 16.692 6 20C6 20.553 6.447 21 7 21H17C17.553 21 18 20.553 18 20C18 16.692 15.308 14 12 14zM8.152 19C8.57 17.263 10.144 16 12 16C13.856 16 15.43 17.263 15.848 19H8.152z"/>
+      </svg>
     </div>
+
+    <!-- User Basic Info -->
+    <div>
+      <p style="font-size: 18px; color: #333; margin: 0;">John Doe</p>
+      <p style="font-size: 14px; color: #555; margin: 0;">@johndoe</p>
+    </div>
+  </div>
+
+  <!-- Profile Details -->
+  <div style="text-align: left; padding: 10px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #f9f9f9;">
+    <p style="font-size: 16px; color: #333;"><strong>Name:</strong> John Doe</p>
+    <p style="font-size: 16px; color: #333;"><strong>Email:</strong> johndoe@example.com</p>
+    <p style="font-size: 16px; color: #333;"><strong>Address:</strong> 123 Main Street, Cityville, Country</p>
+  </div>
+</div>
+
+      
+
+    <!-- Update Profile Section -->
+    <div id="updateProfile" style="display: none;">
+      <h2 style="font-size: 20px; color: #333;">Update Profile</h2>
+      <p style="color: #555;">This section allows the user to update their profile details.</p>
+    </div>
+
+    <!-- Orders Section -->
+    <div id="orders" style="display: none;">
+      <h2 style="font-size: 20px; color: #333;">Orders</h2>
+      <p style="color: #555;">This section displays the user's past orders.</p>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      // Hide all sections
+      document.getElementById('profile').style.display = 'none';
+      document.getElementById('updateProfile').style.display = 'none';
+      document.getElementById('orders').style.display = 'none';
+
+      // Show the selected tab content
+      document.getElementById(tabId).style.display = 'block';
+
+      // Update button styles
+      const buttons = document.querySelectorAll("button");
+      buttons.forEach(button => {
+        button.style.backgroundColor = "transparent";
+        button.style.color = "#fff";
+      });
+
+      // Highlight active button
+      event.target.style.backgroundColor = "#0056b3";
+      event.target.style.color = "#e0e0e0";
+    }
+  </script>
 </body>
 </html>
