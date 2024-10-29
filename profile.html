@@ -57,9 +57,42 @@
 
     <!-- Update Profile Section -->
     <div id="updateProfile" style="display: none;">
-      <h2 style="font-size: 20px; color: #333;">Update Profile</h2>
-      <p style="color: #555;">This section allows the user to update their profile details.</p>
-    </div>
+        <h2 style="font-size: 20px; color: #333;">Update Profile</h2>
+        <p style="color: #555; margin-bottom: 20px;">This section allows the user to update their profile details.</p>
+        
+        <!-- Update Profile Form -->
+        <form style="display: flex; flex-direction: column; gap: 15px; max-width: 400px;">
+          <!-- Name Field -->
+          <label style="font-size: 16px; color: #333;">
+            Name:
+            <input type="text" placeholder="Enter your name" style="width: 100%; padding: 8px; margin-top: 5px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">
+          </label>
+          
+          <!-- Email Field -->
+          <label style="font-size: 16px; color: #333;">
+            Email:
+            <input type="email" placeholder="Enter your email" style="width: 100%; padding: 8px; margin-top: 5px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">
+          </label>
+          
+          <!-- Address Field -->
+          <label style="font-size: 16px; color: #333;">
+            Address:
+            <input type="text" placeholder="Enter your address" style="width: 100%; padding: 8px; margin-top: 5px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">
+          </label>
+          
+          <!-- Password Field -->
+          <label style="font-size: 16px; color: #333;">
+            Password:
+            <input type="password" placeholder="Enter new password" style="width: 100%; padding: 8px; margin-top: 5px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">
+          </label>
+          
+          <!-- Update Button -->
+          <button type="submit" style="padding: 10px 20px; font-size: 16px; color: #fff; background-color: #007bff; border: none; border-radius: 4px; cursor: pointer;">
+            Update Profile
+          </button>
+        </form>
+      </div>
+      
 
     <!-- Orders Section -->
     <div id="orders" style="display: none;">
